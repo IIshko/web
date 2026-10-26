@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Franja decorativa inspirada en geometría andina. Usar con moderación. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 24" fill="none">
+  <g fill="#FCBA00">
+    <path d="M8 12L16 2l8 10-8 10z"/>
+    <path d="M40 12L48 2l8 10-8 10z"/>
+    <path d="M72 12L80 2l8 10-8 10z"/>
+    <path d="M104 12l8-10 8 10-8 10z"/>
+    <path d="M136 12l8-10 8 10-8 10z"/>
+  </g>
+  <path d="M0 21h160" stroke="#FCBA00" stroke-opacity=".35"/>
+  <path d="M0 3h160" stroke="#FCBA00" stroke-opacity=".35"/>
+</svg>

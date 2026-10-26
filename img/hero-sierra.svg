@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ILUSTRACIÓN REFERENCIAL — no es una fotografía de la granja.
+  Reemplazar por una fotografía real de la sierra de Pasco / la granja cuando esté disponible.
+  Mantener una composición amplia (horizontal) y tonos cálidos.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Amanecer en la sierra peruana</title>
+  <desc id="desc">Ilustración de montañas andinas, campos de pastoreo y una casa de campo al amanecer.</desc>
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#688b7c"/>
+      <stop offset=".34" stop-color="#a9b497"/>
+      <stop offset=".62" stop-color="#e5c996"/>
+      <stop offset="1" stop-color="#f6ddaa"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff9dc" stop-opacity=".95"/>
+      <stop offset=".35" stop-color="#ffdd87" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#ffd06b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="farMountains" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6f8273"/>
+      <stop offset="1" stop-color="#3f5d4b"/>
+    </linearGradient>
+    <linearGradient id="midMountains" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f664b"/>
+      <stop offset="1" stop-color="#214733"/>
+    </linearGradient>
+    <linearGradient id="nearHills" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#385d39"/>
+      <stop offset="1" stop-color="#1a3a25"/>
+    </linearGradient>
+    <linearGradient id="field" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7d8b43"/>
+      <stop offset=".55" stop-color="#5b6d32"/>
+      <stop offset="1" stop-color="#2d4626"/>
+    </linearGradient>
+    <linearGradient id="foreground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#233d27"/>
+      <stop offset="1" stop-color="#102417"/>
+    </linearGradient>
+    <linearGradient id="path" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#baa273" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#6e6844" stop-opacity=".45"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx=".52" cy=".45" r=".8">
+      <stop offset=".5" stop-color="#061a0d" stop-opacity="0"/>
+      <stop offset="1" stop-color="#061a0d" stop-opacity=".58"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+    <filter id="softSmall" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".78" numOctaves="3" seed="8" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 .16"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="warmGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <!-- Cielo y sol -->
+  <rect width="1600" height="1100" fill="url(#sky)"/>
+  <circle cx="1195" cy="286" r="280" fill="url(#sunGlow)" filter="url(#soft)"/>
+  <circle cx="1195" cy="286" r="78" fill="#fff4c9" opacity=".92"/>
+
+  <!-- Nubes cálidas -->
+  <g fill="#f7e7c7" opacity=".4" filter="url(#soft)">
+    <ellipse cx="300" cy="230" rx="330" ry="54"/>
+    <ellipse cx="760" cy="165" rx="240" ry="42"/>
+    <ellipse cx="1230" cy="420" rx="350" ry="48"/>
+    <ellipse cx="960" cy="310" rx="170" ry="30"/>
+  </g>
+
+  <!-- Aves lejanas -->
+  <g fill="none" stroke="#344b3c" stroke-width="2.2" stroke-linecap="round" opacity=".55">
+    <path d="M936 262c8-8 15-8 23 0 8-8 15-8 23 0"/>
+    <path d="M1000 228c6-6 11-6 17 0 6-6 11-6 17 0"/>
+    <path d="M862 300c5-5 10-5 15 0 5-5 10-5 15 0"/>
+  </g>
+
+  <!-- Cordillera lejana -->
+  <path d="M0 610L0 514 88 459 166 503 254 404 320 462 395 371 478 448 552 390 630 463 711 382 777 424 854 338 933 429 1007 384 1089 456 1167 386 1245 447 1332 368 1411 444 1494 398 1600 478 1600 620Z" fill="url(#farMountains)" opacity=".72"/>
+  <path d="M854 338L891 365 878 385 854 370 834 391 814 358Z" fill="#dfe5d3" opacity=".45"/>
+  <path d="M1089 456L1110 421 1127 407 1142 448 1167 386 1195 420 1187 469Z" fill="#e6e6d3" opacity=".3"/>
+
+  <!-- Neblina de valle -->
+  <g fill="#f4e4c4" opacity=".38" filter="url(#soft)">
+    <ellipse cx="420" cy="550" rx="460" ry="62"/>
+    <ellipse cx="1160" cy="560" rx="420" ry="54"/>
+    <ellipse cx="750" cy="600" rx="620" ry="44"/>
+  </g>
+
+  <!-- Montañas medias -->
+  <path d="M0 686L0 598 92 552 158 587 248 507 333 574 410 522 486 579 574 486 648 551 735 510 827 578 914 518 1004 575 1092 523 1185 589 1287 514 1375 577 1467 527 1540 565 1600 539 1600 699Z" fill="url(#midMountains)"/>
+  <path d="M0 744L0 658 100 622 187 670 288 610 374 681 463 624 552 681 639 622 729 676 808 609 904 673 997 628 1089 691 1171 626 1267 681 1358 625 1450 679 1540 632 1600 659 1600 760Z" fill="url(#nearHills)" opacity=".9"/>
+
+  <!-- Campos y luz de valle -->
+  <path d="M0 824L0 701 173 679 340 707 510 672 680 712 843 680 1012 707 1185 666 1352 702 1505 673 1600 694 1600 860Z" fill="url(#field)"/>
+  <g opacity=".55">
+    <path d="M0 764C252 731 478 771 725 744s578-14 875 18v52c-312-28-641 4-933-16S246 803 0 827Z" fill="#c4b65f"/>
+    <path d="M0 804c305-39 572 0 837-20s521-14 763 8" fill="none" stroke="#d9c77f" stroke-width="5" opacity=".45"/>
+    <path d="M0 851c245-28 477 1 720-14s606-14 880 10" fill="none" stroke="#a9a650" stroke-width="3" opacity=".4"/>
+  </g>
+
+  <!-- Parcelas en perspectiva -->
+  <g opacity=".5">
+    <path d="M120 738l250-38 94 99-314 20z" fill="#8e994e"/>
+    <path d="M559 715l185-22 83 95-244 8z" fill="#77883d"/>
+    <path d="M900 724l205-23 62 104-250-5z" fill="#8d9342"/>
+    <path d="M1338 714l177-18 85 99-221-2z" fill="#667d37"/>
+    <path d="M0 890l421-54 187 62-208 72L0 1015Z" fill="#304b29"/>
+    <path d="M1100 872l271-50 229 44v112l-329 20z" fill="#2b4927"/>
+  </g>
+
+  <!-- Sendero -->
+  <path d="M844 1100c-17-88 12-148 78-207 56-50 81-90 96-146 11-42 31-74 63-95" fill="none" stroke="url(#path)" stroke-width="38" stroke-linecap="round" opacity=".7"/>
+  <path d="M844 1100c-17-88 12-148 78-207 56-50 81-90 96-146 11-42 31-74 63-95" fill="none" stroke="#e2cd98" stroke-width="2.5" stroke-dasharray="6 16" opacity=".45"/>
+
+  <!-- Árboles lejanos -->
+  <g fill="#28452d" opacity=".9">
+    <path d="M948 636c-25 0-43-18-43-41 0-29 25-55 43-84 18 29 43 55 43 84 0 23-18 41-43 41z"/>
+    <rect x="944" y="622" width="8" height="48" rx="3"/>
+    <path d="M1018 655c-18 0-31-14-31-31 0-22 18-41 31-63 13 22 31 41 31 63 0 17-13 31-31 31z" opacity=".8"/>
+    <rect x="1014" y="648" width="6" height="34" rx="2"/>
+    <path d="M74 677c-21 0-37-16-37-36 0-25 22-47 37-72 15 25 37 47 37 72 0 20-16 36-37 36z" opacity=".75"/>
+    <rect x="70" y="663" width="7" height="42" rx="3"/>
+  </g>
+
+  <!-- Casa de campo -->
+  <g transform="translate(1122 560)">
+    <ellipse cx="98" cy="209" rx="142" ry="26" fill="#152d1a" opacity=".38"/>
+    <!-- Cuerpo -->
+    <path d="M10 196V99l85-44 88 44v97z" fill="#e7d2a4"/>
+    <path d="M10 101l85-47 88 47-13 17-75-39-72 39z" fill="#7c4c31"/>
+    <path d="M3 102l92-57 94 57-15 20-79-48-77 48z" fill="#5f3626"/>
+    <!-- Sombra lateral -->
+    <path d="M128 62l55 31v103h-55z" fill="#c9ad7a" opacity=".55"/>
+    <!-- Ventanas y puerta -->
+    <rect x="36" y="126" width="31" height="30" rx="2" fill="#233e2a"/>
+    <rect x="41" y="131" width="21" height="20" rx="1" fill="#f8c84f" opacity=".9"/>
+    <rect x="80" y="126" width="25" height="70" rx="2" fill="#4f3422"/>
+    <path d="M80 126h25v70H80z" fill="url(#field)" opacity=".1"/>
+    <circle cx="98" cy="165" r="2.4" fill="#e5b84e"/>
+    <rect x="125" y="129" width="33" height="28" rx="2" fill="#233e2a"/>
+    <rect x="130" y="134" width="23" height="18" rx="1" fill="#f8c84f" opacity=".8"/>
+    <!-- Chimenea -->
+    <rect x="139" y="62" width="16" height="38" rx="2" fill="#815039"/>
+    <path d="M132 62h30v9h-30z" fill="#593522"/>
+    <!-- Humo -->
+    <g fill="#f5e8ce" opacity=".3" filter="url(#softSmall)">
+      <circle cx="151" cy="44" r="13"/>
+      <circle cx="160" cy="24" r="16"/>
+      <circle cx="146" cy="4" r="19"/>
+    </g>
+  </g>
+
+  <!-- Cerca de madera -->
+  <g stroke="#5e4a2f" stroke-width="5" stroke-linecap="round" opacity=".85">
+    <path d="M1323 742l-7-50M1361 738l-6-48M1399 733l-6-47M1437 729l-5-45M1475 725l-5-44"/>
+    <path d="M1315 709l166-4M1319 727l166-4"/>
+  </g>
+
+  <!-- Gallinas en el campo -->
+  <g>
+    <!-- Gallina 1 -->
+    <g transform="translate(1000 824) scale(1.08)">
+      <ellipse cx="0" cy="18" rx="34" ry="22" fill="#f1dfb7"/>
+      <path d="M-22 8c-24-3-30-21-19-33 9 15 21 20 37 20z" fill="#d8bd85"/>
+      <path d="M22 14c20-4 29-17 26-31-5 13-16 19-30 19z" fill="#b59462"/>
+      <path d="M-5 2c-3-15-1-28 10-33 3 12 0 23-4 34z" fill="#d94c37"/>
+      <circle cx="17" cy="-17" r="11" fill="#f1dfb7"/>
+      <path d="M23-25c2-6 8-8 12-4-2 5-6 7-12 4z" fill="#d94c37"/>
+      <path d="M14-28c-3-6 0-11 6-11 4 0 7 3 7 8-4 3-8 4-13 3z" fill="#d94c37"/>
+      <circle cx="20" cy="-19" r="1.5" fill="#2b2b2b"/>
+      <path d="M27-15l8 3-8 4z" fill="#d9a22c"/>
+      <path d="M-7 11l-4 22M8 13l4 22" stroke="#b78038" stroke-width="3.4" stroke-linecap="round"/>
+      <path d="M-14 35l7-3M11 35l7-3" stroke="#a66e30" stroke-width="2.4" stroke-linecap="round"/>
+    </g>
+    <!-- Gallina 2 -->
+    <g transform="translate(1334 808) scale(.86)">
+      <ellipse cx="0" cy="18" rx="34" ry="22" fill="#c17d4b"/>
+      <path d="M-22 8c-24-3-30-21-19-33 9 15 21 20 37 20z" fill="#9e5b33"/>
+      <path d="M22 14c20-4 29-17 26-31-5 13-16 19-30 19z" fill="#7c4428"/>
+      <path d="M-5 2c-3-15-1-28 10-33 3 12 0 23-4 34z" fill="#a63628"/>
+      <circle cx="17" cy="-17" r="11" fill="#c17d4b"/>
+      <path d="M23-25c2-6 8-8 12-4-2 5-6 7-12 4z" fill="#a63628"/>
+      <path d="M14-28c-3-6 0-11 6-11 4 0 7 3 7 8-4 3-8 4-13 3z" fill="#a63628"/>
+      <circle cx="20" cy="-19" r="1.5" fill="#2b2b2b"/>
+      <path d="M27-15l8 3-8 4z" fill="#d9a22c"/>
+      <path d="M-7 11l-4 22M8 13l4 22" stroke="#9a672f" stroke-width="3.4" stroke-linecap="round"/>
+      <path d="M-14 35l7-3M11 35l7-3" stroke="#7f5227" stroke-width="2.4" stroke-linecap="round"/>
+    </g>
+    <!-- Gallina 3 más lejana -->
+    <g transform="translate(1180 790) scale(.5)" opacity=".82">
+      <ellipse cx="0" cy="18" rx="34" ry="22" fill="#d7c69a"/>
+      <path d="M-22 8c-24-3-30-21-19-33 9 15 21 20 37 20z" fill="#ae9468"/>
+      <path d="M22 14c20-4 29-17 26-31-5 13-16 19-30 19z" fill="#8f7248"/>
+      <circle cx="17" cy="-17" r="11" fill="#d7c69a"/>
+      <path d="M14-28c-3-6 0-11 6-11 4 0 7 3 7 8-4 3-8 4-13 3z" fill="#b14632"/>
+      <circle cx="20" cy="-19" r="1.5" fill="#2b2b2b"/>
+      <path d="M27-15l8 3-8 4z" fill="#d9a22c"/>
+      <path d="M-7 11l-4 22M8 13l4 22" stroke="#9a672f" stroke-width="3.4" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Vegetación de primer plano -->
+  <path d="M0 953c219-77 405-49 598-18 157 25 308 47 470 7 151-37 291-57 532 0v158H0Z" fill="url(#foreground)"/>
+  <g stroke="#6f7f3e" stroke-width="4" stroke-linecap="round" opacity=".8">
+    <path d="M120 1100c-28-74-15-136 27-192M146 1100c5-83 35-141 92-183M148 1100c41-67 49-131 29-198M1210 1100c-12-63 5-114 52-151M1240 1100c24-69 62-108 122-131M1500 1100c-25-65-11-127 32-173"/>
+  </g>
+  <g fill="#c9a53d" opacity=".55">
+    <circle cx="195" cy="1012" r="3"/><circle cx="215" cy="980" r="2.2"/><circle cx="248" cy="1028" r="2.6"/>
+    <circle cx="1272" cy="992" r="2.8"/><circle cx="1310" cy="1010" r="2.1"/><circle cx="1532" cy="1016" r="2.6"/>
+  </g>
+  <g stroke="#aeb56d" stroke-width="2" opacity=".55">
+    <path d="M650 1100c-9-50 0-88 27-119M668 1100c18-44 46-70 84-79M685 1100c7-40 23-73 52-98"/>
+  </g>
+
+  <!-- Viñeta y textura -->
+  <rect width="1600" height="1100" fill="url(#vignette)"/>
+  <rect width="1600" height="1100" filter="url(#grain)" opacity=".55"/>
+</svg>

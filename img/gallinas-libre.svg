@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ILUSTRACIÓN REFERENCIAL — no es una fotografía de la granja.
+  Reemplazar por una foto real de las gallinas de libre pastoreo en La Loma Escondida.
+  Proporción horizontal (4:3).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Gallinas de libre pastoreo</title>
+  <desc id="desc">Ilustración de gallinas caminando libres entre pasto y flores silvestres al atardecer.</desc>
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8ca38a"/>
+      <stop offset=".5" stop-color="#e2ca94"/>
+      <stop offset="1" stop-color="#f5dda8"/>
+    </linearGradient>
+    <linearGradient id="meadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#86904f"/>
+      <stop offset=".45" stop-color="#5d7139"/>
+      <stop offset="1" stop-color="#2c4827"/>
+    </linearGradient>
+    <linearGradient id="henBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c9834d"/>
+      <stop offset=".5" stop-color="#a95c32"/>
+      <stop offset="1" stop-color="#743d25"/>
+    </linearGradient>
+    <linearGradient id="henBody2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9dbb8"/>
+      <stop offset=".55" stop-color="#c8b48d"/>
+      <stop offset="1" stop-color="#9d8158"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff0bf" stop-opacity=".95"/>
+      <stop offset=".45" stop-color="#ffd98b" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#ffd98b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx=".5" cy=".45" r=".8">
+      <stop offset=".5" stop-color="#08170c" stop-opacity="0"/>
+      <stop offset="1" stop-color="#08170c" stop-opacity=".55"/>
+    </radialGradient>
+    <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+    <filter id="blurSmall" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" seed="21"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 .13"/></feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#sky)"/>
+  <circle cx="975" cy="208" r="300" fill="url(#sunGlow)" filter="url(#blur)"/>
+  <circle cx="975" cy="208" r="57" fill="#fff1c4" opacity=".8"/>
+
+  <!-- Montañas desenfocadas -->
+  <path d="M0 490V374l109-67 108 76 96-103 112 99 102-58 119 75 105-96 124 86 112-51 113 70v85Z" fill="#73836e" opacity=".5" filter="url(#blurSmall)"/>
+  <path d="M0 557V448l136-51 118 62 118-71 117 71 126-55 145 65 131-47 129 53v82Z" fill="#475f43" opacity=".72" filter="url(#blurSmall)"/>
+
+  <!-- Pradera -->
+  <path d="M0 530c180-53 351-44 533-8 191 38 403 37 667-21v399H0Z" fill="url(#meadow)"/>
+  <g fill="none" stroke="#a5a55c" stroke-width="2" opacity=".3">
+    <path d="M0 583c198-27 397-9 590 18 220 30 398 21 610-20"/>
+    <path d="M0 645c210-31 401-15 604 15 211 31 409 18 596-22"/>
+    <path d="M0 724c240-25 426-7 613 20 202 29 393 19 587-18"/>
+  </g>
+
+  <!-- Cerca desenfocada -->
+  <g stroke="#665236" stroke-width="9" stroke-linecap="round" opacity=".55" filter="url(#blurSmall)">
+    <path d="M30 548V464M122 552V456M214 548V459M306 552V461M1090 530V446M1160 526V442"/>
+    <path d="M22 486l1085-33M22 517l1085-33"/>
+  </g>
+
+  <!-- Rayos de luz -->
+  <g fill="#ffe7a8" opacity=".1" filter="url(#blurSmall)">
+    <path d="M870 0l230 0-345 900-155 0z"/>
+    <path d="M1030 0l75 0-180 900-87 0z"/>
+  </g>
+
+  <!-- Gallina principal -->
+  <g transform="translate(405 585) scale(1.6)">
+    <ellipse cx="0" cy="97" rx="136" ry="26" fill="#152918" opacity=".42" filter="url(#blurSmall)"/>
+    <!-- Cola -->
+    <path d="M-72 26c-76 8-102-51-74-88 9 43 40 62 98 53z" fill="#6d3c25"/>
+    <path d="M-64 37c-88 14-113-45-86-89 13 42 47 60 112 48z" fill="#86502f"/>
+    <path d="M-55 47c-94 8-110-41-82-81 13 37 44 53 104 43z" fill="#9d6036"/>
+    <!-- Cuerpo -->
+    <ellipse cx="0" cy="36" rx="102" ry="62" fill="url(#henBody)"/>
+    <!-- Pecho iluminado -->
+    <path d="M25 9c47-6 82 20 83 63 0 22-17 42-44 47-32 6-57-12-60-39-3-29 8-53 21-71z" fill="#d09057" opacity=".65"/>
+    <!-- Cuello y cabeza -->
+    <path d="M52 -7c17-34 39-49 66-44 24 5 35 29 23 50-8 13-20 21-38 25z" fill="url(#henBody)"/>
+    <circle cx="129" cy="-63" r="34" fill="#b76c3b"/>
+    <path d="M123 -94c6-17 23-23 35-12-5 14-16 20-35 12z" fill="#af3226"/>
+    <path d="M107 -91c-7-18 0-32 16-32 11 0 19 8 20 20-10 9-22 13-36 12z" fill="#af3226"/>
+    <path d="M142 -88c9-12 22-12 29-2-7 10-16 13-29 2z" fill="#c44331"/>
+    <circle cx="140" cy="-70" r="4.2" fill="#23170e"/>
+    <circle cx="141" cy="-71" r="1.1" fill="#fff5da"/>
+    <path d="M160 -56l27 9-25 14z" fill="#dca234"/>
+    <path d="M156 -50c0 8 4 15 10 18" stroke="#8f281f" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M137 -42c4 10 2 19-3 25" stroke="#a32e24" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- Alas -->
+    <path d="M-28 1c40-19 78-8 90 26-28 19-63 18-91-4z" fill="#8c4d2e"/>
+    <path d="M-15 12c30-9 53-2 65 18-21 10-44 8-64-2z" fill="#b36c3f" opacity=".65"/>
+    <!-- Patas -->
+    <path d="M-22 92l-9 54M29 93l7 54" stroke="#c18d48" stroke-width="8" stroke-linecap="round"/>
+    <path d="M-46 155l16-7M-31 156l14-7M16 157l15-7M31 157l15-7" stroke="#a67433" stroke-width="6" stroke-linecap="round"/>
+    <path d="M-48 151c12-7 26-7 38 0M0 151c12-7 25-8 38-2" stroke="#b27d37" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- Plumas -->
+    <g fill="#d9a76f" opacity=".4">
+      <path d="M-52 26c18-9 35-8 48 2-16 9-31 10-48-2z"/>
+      <path d="M-40 50c16-6 30-4 42 5-14 6-28 6-42-5z"/>
+      <path d="M20 54c14-6 28-3 38 6-13 6-26 5-38-6z"/>
+    </g>
+  </g>
+
+  <!-- Gallina clara -->
+  <g transform="translate(815 645) scale(1.05)">
+    <ellipse cx="0" cy="78" rx="102" ry="20" fill="#152918" opacity=".35" filter="url(#blurSmall)"/>
+    <path d="M-58 20c-60 5-81-40-58-72 8 35 33 49 79 43z" fill="#9c7d53"/>
+    <path d="M-50 32c-68 5-82-36-59-69 10 31 35 44 83 38z" fill="#b79b6d"/>
+    <ellipse cx="0" cy="28" rx="80" ry="50" fill="url(#henBody2)"/>
+    <path d="M41 -4c14-28 32-39 52-34 18 5 25 24 15 40-7 10-16 16-30 20z" fill="url(#henBody2)"/>
+    <circle cx="101" cy="-47" r="26" fill="#d6c49e"/>
+    <path d="M96 -70c5-13 18-17 27-9-4 11-12 16-27 9z" fill="#a93025"/>
+    <path d="M84 -68c-5-14 0-25 13-25 9 0 15 6 16 16-8 6-17 10-29 9z" fill="#a93025"/>
+    <circle cx="109" cy="-52" r="3.3" fill="#23170e"/>
+    <path d="M125 -41l21 7-20 11z" fill="#dca234"/>
+    <path d="M-45 8c32-15 62-6 72 20-22 15-50 14-72-3z" fill="#b7a17b"/>
+    <path d="M-15 74l-7 42M24 75l6 42" stroke="#b9863e" stroke-width="6" stroke-linecap="round"/>
+    <path d="M-35 120l14-6M12 122l13-6M33 122l13-6" stroke="#93672f" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Pollito -->
+  <g transform="translate(675 750) scale(.62)">
+    <ellipse cx="0" cy="27" rx="42" ry="30" fill="#e0b660"/>
+    <circle cx="21" cy="-11" r="25" fill="#e9c678"/>
+    <circle cx="30" cy="-15" r="3.4" fill="#241a10"/>
+    <path d="M41 -9l18 6-17 10z" fill="#c8882f"/>
+    <path d="M9 -34c3-10 12-13 18-5-2 8-8 11-18 5z" fill="#c4973f"/>
+    <path d="M-13 16c16-9 30-8 40 2-13 8-27 8-40-2z" fill="#f1dda3" opacity=".6"/>
+    <path d="M-12 52l-4 22M17 52l3 22" stroke="#c18d48" stroke-width="5" stroke-linecap="round"/>
+    <path d="M-23 76l9-4M10 76l9-4M22 77l9-4" stroke="#a67433" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Flores y pasto -->
+  <g stroke="#758a46" stroke-width="3" stroke-linecap="round" opacity=".8">
+    <path d="M40 900c-4-88 20-149 70-184M103 900c21-87 58-140 114-162M214 900c-4-77 14-129 54-159M1110 900c-21-78-8-145 35-201M1163 900c17-72 52-120 105-147M1023 900c-10-69 7-123 49-160"/>
+  </g>
+  <g fill="#e5b34d">
+    <circle cx="114" cy="767" r="4"/><circle cx="128" cy="753" r="3"/><circle cx="1093" cy="747" r="4"/>
+    <circle cx="1180" cy="801" r="3"/><circle cx="968" cy="800" r="3.5"/>
+  </g>
+  <g fill="#d66c4b">
+    <circle cx="257" cy="794" r="4"/><circle cx="270" cy="780" r="3"/><circle cx="1187" cy="755" r="3.5"/>
+  </g>
+  <g fill="#f5e6c5" opacity=".55">
+    <circle cx="340" cy="768" r="2"/><circle cx="377" cy="823" r="2.4"/><circle cx="902" cy="782" r="2"/><circle cx="530" cy="835" r="2.2"/>
+  </g>
+
+  <rect width="1200" height="900" fill="url(#vignette)"/>
+  <rect width="1200" height="900" filter="url(#grain)" opacity=".45"/>
+</svg>

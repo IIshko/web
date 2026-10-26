@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ILUSTRACIÓN REFERENCIAL — no es una fotografía de la granja.
+  Reemplazar por una foto real del hogar / caserío en la sierra de Pasco.
+  Proporción vertical (4:5 aproximada).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1300" role="img" aria-labelledby="title desc">
+  <title id="title">Casa de campo en la sierra peruana</title>
+  <desc id="desc">Ilustración de una casa de adobe y piedra con flores silvestres y gallinas al aire libre.</desc>
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9db29e"/>
+      <stop offset=".5" stop-color="#d9c49a"/>
+      <stop offset="1" stop-color="#f1dbad"/>
+    </linearGradient>
+    <linearGradient id="far" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6d836f"/>
+      <stop offset="1" stop-color="#385640"/>
+    </linearGradient>
+    <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#436747"/>
+      <stop offset="1" stop-color="#1d3e2a"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8d7b4"/>
+      <stop offset=".55" stop-color="#d6bd8f"/>
+      <stop offset="1" stop-color="#b59668"/>
+    </linearGradient>
+    <linearGradient id="roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8b4c31"/>
+      <stop offset="1" stop-color="#5b3024"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5f713d"/>
+      <stop offset="1" stop-color="#263f28"/>
+    </linearGradient>
+    <radialGradient id="warm" cx=".2" cy=".1" r=".9">
+      <stop offset="0" stop-color="#ffe9b3" stop-opacity=".64"/>
+      <stop offset=".55" stop-color="#ffdf9a" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#0b2413" stop-opacity=".28"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx=".5" cy=".44" r=".8">
+      <stop offset=".55" stop-color="#07180d" stop-opacity="0"/>
+      <stop offset="1" stop-color="#07180d" stop-opacity=".5"/>
+    </radialGradient>
+    <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="blurSmall" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".82" numOctaves="3" seed="12"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 .15"/></feComponentTransfer>
+    </filter>
+    <pattern id="stone" width="54" height="30" patternUnits="userSpaceOnUse">
+      <path d="M0 0h54v30H0z" fill="none" stroke="#8e764f" stroke-width="1.2" opacity=".32"/>
+      <path d="M27 0v30M0 15h54" stroke="#8e764f" stroke-width=".8" opacity=".22"/>
+    </pattern>
+    <pattern id="weave" width="18" height="18" patternUnits="userSpaceOnUse">
+      <path d="M0 9h18M9 0v18" stroke="#7b4b31" stroke-width="2" opacity=".4"/>
+    </pattern>
+  </defs>
+
+  <rect width="1100" height="1300" fill="url(#sky)"/>
+  <circle cx="210" cy="225" r="120" fill="#ffe4a5" opacity=".55" filter="url(#blur)"/>
+  <g fill="#fff3d4" opacity=".38" filter="url(#blur)">
+    <ellipse cx="600" cy="180" rx="300" ry="45"/>
+    <ellipse cx="850" cy="320" rx="290" ry="38"/>
+  </g>
+
+  <!-- Montañas -->
+  <path d="M0 600V440l97-66 94 65 87-101 97 91 87-60 102 75 99-109 94 82 128-95 115 101V610Z" fill="url(#far)" opacity=".74"/>
+  <path d="M0 700V565l106-54 97 57 94-64 111 82 103-48 98 72 126-76 124 76 118-55V720Z" fill="url(#mid)" opacity=".85"/>
+  <g fill="#e9dfc4" opacity=".25" filter="url(#blurSmall)">
+    <ellipse cx="500" cy="645" rx="370" ry="38"/>
+  </g>
+
+  <!-- Terreno -->
+  <path d="M0 920c180-112 366-132 582-88 207 42 348 50 518-18v486H0Z" fill="url(#ground)"/>
+  <path d="M0 969c217-81 412-75 605-16 167 51 326 56 495 0v347H0Z" fill="#314c2c"/>
+  <path d="M0 1135c152-35 283-21 430 22 187 55 344 40 670-34v177H0Z" fill="#1c3520"/>
+
+  <!-- Casa principal -->
+  <g transform="translate(310 430)">
+    <!-- Sombra -->
+    <ellipse cx="280" cy="592" rx="355" ry="42" fill="#0c2213" opacity=".4" filter="url(#blurSmall)"/>
+    <!-- Muro lateral -->
+    <path d="M20 265L250 150l244 121v303H20Z" fill="url(#wall)"/>
+    <path d="M20 265L250 150l244 121v303H20Z" fill="url(#stone)"/>
+    <!-- Tejado -->
+    <path d="M0 278L246 125l295 153-20 33-275-145L15 312Z" fill="#70402a"/>
+    <path d="M40 279l206-121 238 124-10 20-228-111-195 108Z" fill="url(#roof)"/>
+    <path d="M51 270l194-101 220 105" fill="none" stroke="#b8784f" stroke-width="4" opacity=".45"/>
+    <path d="M68 281l179-86 200 89" fill="none" stroke="#3e2018" stroke-width="3" opacity=".35"/>
+    <!-- Viga -->
+    <path d="M25 293h470v20H25z" fill="#684129"/>
+    <!-- Puerta -->
+    <rect x="192" y="366" width="111" height="220" rx="4" fill="#5b3826"/>
+    <rect x="199" y="373" width="97" height="213" rx="2" fill="url(#weave)"/>
+    <path d="M201 373l92 213M296 373l-92 213" stroke="#8b613f" stroke-width="3" opacity=".5"/>
+    <circle cx="283" cy="480" r="4" fill="#e0b653"/>
+    <!-- Ventanas -->
+    <g>
+      <rect x="63" y="387" width="91" height="90" rx="3" fill="#715038"/>
+      <rect x="72" y="396" width="73" height="72" rx="2" fill="#f5c860"/>
+      <path d="M108 396v72M72 432h73" stroke="#6b4a32" stroke-width="4"/>
+      <rect x="63" y="387" width="91" height="90" rx="3" fill="none" stroke="#a98152" stroke-width="4"/>
+    </g>
+    <g>
+      <rect x="360" y="387" width="91" height="90" rx="3" fill="#715038"/>
+      <rect x="369" y="396" width="73" height="72" rx="2" fill="#f5c860"/>
+      <path d="M405 396v72M369 432h73" stroke="#6b4a32" stroke-width="4"/>
+      <rect x="360" y="387" width="91" height="90" rx="3" fill="none" stroke="#a98152" stroke-width="4"/>
+    </g>
+    <!-- Balcón / madera -->
+    <path d="M52 521h406v20H52z" fill="#6b432b"/>
+    <path d="M74 541v54M118 541v54M162 541v54M380 541v54M424 541v54" stroke="#8d633f" stroke-width="4"/>
+    <path d="M64 587h380" stroke="#8d633f" stroke-width="4"/>
+    <!-- Flores en ventanas -->
+    <g fill="#d16b4b">
+      <circle cx="78" cy="510" r="8"/><circle cx="96" cy="503" r="10"/><circle cx="114" cy="511" r="7"/>
+      <circle cx="137" cy="506" r="9"/><circle cx="371" cy="509" r="8"/><circle cx="397" cy="503" r="10"/>
+      <circle cx="421" cy="510" r="7"/><circle cx="441" cy="505" r="9"/>
+    </g>
+    <g fill="#e9aa54">
+      <circle cx="88" cy="512" r="4"/><circle cx="126" cy="508" r="4"/><circle cx="387" cy="510" r="4"/><circle cx="433" cy="508" r="4"/>
+    </g>
+    <g stroke="#456a38" stroke-width="2" fill="none" opacity=".8">
+      <path d="M80 518c-3 12-6 18-13 23M110 518c2 12 5 19 11 25M378 518c-2 12-5 19-11 25M420 518c2 12 5 19 11 25"/>
+    </g>
+  </g>
+
+  <!-- Muro de piedra frontal -->
+  <path d="M80 1050c137-32 265-30 396 6 132 36 272 34 479-12v159H80Z" fill="#6a6048"/>
+  <g opacity=".6" stroke="#463f30" stroke-width="2">
+    <path d="M80 1090h880M80 1140h880M80 1190h880M160 1050v60M275 1062v48M401 1080v50M520 1090v50M657 1080v50M790 1058v52M910 1044v56"/>
+  </g>
+  <path d="M80 1050c137-32 265-30 396 6 132 36 272 34 479-12v45c-204 42-343 45-478 10-132-34-260-35-397-6Z" fill="#857b5e" opacity=".6"/>
+
+  <!-- Camino y jardín -->
+  <path d="M470 1300c-27-104 4-165 85-205 60-30 105-68 132-123l65 20c-28 77-81 128-156 165-60 30-84 74-67 143Z" fill="#a98f63" opacity=".48"/>
+  <g fill="#436b37">
+    <path d="M50 1237c-25-22-32-51-20-88 29 9 50 36 44 83z"/>
+    <path d="M109 1261c-17-29-14-56 10-82 22 19 28 52 8 85z"/>
+    <path d="M895 1254c-21-27-20-55 5-82 25 17 34 50 17 82z"/>
+    <path d="M970 1223c-12-29-3-53 24-71 17 23 18 52-4 77z"/>
+  </g>
+  <g stroke="#597d41" stroke-width="3" stroke-linecap="round">
+    <path d="M195 1300c-13-59 1-100 39-130M234 1300c16-56 45-92 89-108M776 1300c-8-61 8-107 50-137M822 1300c24-52 57-79 103-87"/>
+  </g>
+  <g fill="#d46b4a">
+    <circle cx="226" cy="1173" r="8"/><circle cx="242" cy="1162" r="11"/><circle cx="259" cy="1177" r="7"/>
+    <circle cx="847" cy="1166" r="9"/><circle cx="867" cy="1156" r="7"/><circle cx="882" cy="1172" r="10"/>
+  </g>
+  <g fill="#eab95d">
+    <circle cx="190" cy="1196" r="5"/><circle cx="277" cy="1190" r="4"/><circle cx="805" cy="1192" r="5"/><circle cx="914" cy="1196" r="4"/>
+  </g>
+
+  <!-- Gallina protagonista -->
+  <g transform="translate(735 1000) scale(1.25)">
+    <ellipse cx="0" cy="37" rx="72" ry="14" fill="#132819" opacity=".45" filter="url(#blurSmall)"/>
+    <ellipse cx="0" cy="12" rx="57" ry="35" fill="#b86f3f"/>
+    <path d="M-35 0c-40-5-51-35-31-57 13 25 36 34 62 33z" fill="#8d4b2b"/>
+    <path d="M-30 5c-48 4-65-23-50-48 13 19 36 27 67 22z" fill="#9f572f"/>
+    <path d="M34 16c32-7 47-29 40-50-8 21-25 31-47 30z" fill="#7f4026"/>
+    <path d="M-9 -4c-6-26-2-46 17-56 5 20 0 39-6 57z" fill="#b33e2f"/>
+    <circle cx="27" cy="-31" r="19" fill="#bd7441"/>
+    <path d="M37-44c3-10 14-13 21-7-3 9-10 12-21 7z" fill="#a92f25"/>
+    <path d="M21-49c-5-11 0-19 10-19 7 0 12 5 12 13-7 5-14 7-22 6z" fill="#a92f25"/>
+    <circle cx="32" cy="-34" r="2.4" fill="#241a10"/>
+    <path d="M44-27l14 5-14 7z" fill="#dfaa37"/>
+    <path d="M38-24c0 5 2 9 5 12" stroke="#9a2e25" stroke-width="3" fill="none"/>
+    <path d="M-12 20l-7 39M16 22l6 38" stroke="#b07835" stroke-width="5" stroke-linecap="round"/>
+    <path d="M-24 62l11-4M17 63l11-4" stroke="#93612c" stroke-width="4" stroke-linecap="round"/>
+    <g fill="#d2a65e" opacity=".65">
+      <path d="M-32 18c11-7 22-9 34-7-11 12-22 17-38 18z"/>
+      <path d="M6 34c15-5 27-2 36 8-14 5-26 3-38-2z"/>
+    </g>
+  </g>
+
+  <!-- Segunda gallina -->
+  <g transform="translate(520 1110) scale(.65)" opacity=".92">
+    <ellipse cx="0" cy="12" rx="57" ry="35" fill="#d8c49a"/>
+    <path d="M-35 0c-40-5-51-35-31-57 13 25 36 34 62 33z" fill="#b5a174"/>
+    <path d="M34 16c32-7 47-29 40-50-8 21-25 31-47 30z" fill="#a98b5c"/>
+    <path d="M-9 -4c-6-26-2-46 17-56 5 20 0 39-6 57z" fill="#b64131"/>
+    <circle cx="27" cy="-31" r="19" fill="#d8c49a"/>
+    <path d="M21-49c-5-11 0-19 10-19 7 0 12 5 12 13-7 5-14 7-22 6z" fill="#b64131"/>
+    <circle cx="32" cy="-34" r="2.4" fill="#241a10"/>
+    <path d="M44-27l14 5-14 7z" fill="#dfaa37"/>
+    <path d="M-12 20l-7 39M16 22l6 38" stroke="#b07835" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Luz y textura -->
+  <rect width="1100" height="1300" fill="url(#warm)"/>
+  <rect width="1100" height="1300" fill="url(#vignette)"/>
+  <rect width="1100" height="1300" filter="url(#grain)" opacity=".48"/>
+</svg>
